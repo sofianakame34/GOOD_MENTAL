@@ -1,4 +1,4 @@
 {
-  "root : "."
-  "clean_url" : true
+  "root": ".",
+  "clean_url": true
 }
