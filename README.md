@@ -2,5 +2,5 @@
 WORKSHOP I1G3
 
 ## fichiers important:
-procfile
+procfile,
 composer.json
