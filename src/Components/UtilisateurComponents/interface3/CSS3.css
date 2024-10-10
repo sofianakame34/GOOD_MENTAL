@@ -1,0 +1,225 @@
+/* Enhanced Articles Page CSS */
+
+:root {
+    --primary-color: #1db9b4;
+    --secondary-color: #243953;
+    --background-color: #f9fafb;
+    --text-color: #243953;
+    --card-background: #ffffff;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.3s;
+  }
+
+  body {
+    font-family: 'Hind', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+  }
+
+  .articles-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  /* Header styles */
+  .main-header {
+    background-color: var(--card-background);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  .logo {
+    width: 120px;
+    height: auto;
+  }
+
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .nav-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--transition-speed);
+  }
+
+  .nav-link:hover {
+    color: var(--primary-color);
+  }
+
+  /* Content wrapper styles */
+  .content-wrapper {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .main-content {
+    flex: 1;
+  }
+
+  /* Article grid styles */
+  .articles-grid,
+  .pro-articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  /* Article card styles */
+  .article-card,
+  .pro-article-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    transition: transform var(--transition-speed);
+  }
+
+  .article-card:hover,
+  .pro-article-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .article-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .article-content {
+    padding: 1.5rem;
+  }
+
+  .article-category {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .article-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: var(--secondary-color);
+  }
+
+  .article-meta {
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  /* Expert card styles */
+  .expert-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .expert-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .expert-info {
+    flex: 1;
+  }
+
+  .expert-name {
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .expert-title {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0.25rem 0;
+  }
+
+  .expert-articles {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+  }
+
+  /* Sidebar styles */
+  .experts-sidebar {
+    width: 300px;
+  }
+
+  /* Button styles */
+  .view-all-experts,
+  .view-all-pro-articles {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color var(--transition-speed);
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .view-all-experts:hover,
+  .view-all-pro-articles:hover {
+    background-color: #17a29d;
+  }
+
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column;
+    }
+
+    .experts-sidebar {
+      width: 100%;
+    }
+  }
+
+  /* Accessibility styles */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top var(--transition-speed);
+  }
+
+  .skip-link:focus {
+    top: 0;
+  }
+
+  /* Focus styles */
+  a:focus,
+  button:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+  }
